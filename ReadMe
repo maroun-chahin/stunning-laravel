@@ -16,7 +16,7 @@ test by:
 php -m | grep mcrypt
 should get:
 mcrypt
-
+sudo a2enmod rewrite
 sudo systemctl restart apache2
 
 
@@ -65,6 +65,8 @@ chgrp will allowaccess to that grp by the users of the grp,meaniung by changing 
 “sudo chmod -R ug+rwx storage bootstrap/cache"
 chmod stands for chand mode and -R to chnage the premissions of access, and the other flags ug+rwx are the file premissionsato be set 
 these premissions restrict the way this file can be accessed. rwx stand for read write execute 
+
+in both commadnds -R means recursively on all files.
 
 IP address:
 curl ifconfig.me
