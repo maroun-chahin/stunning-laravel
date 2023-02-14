@@ -1,2 +1,77 @@
-Hello how are you?
-are you still watching?
+sudo gives the current user root privileges, its lik egranting administarator permission owinsowed, its short of super user do
+apt-get is a management package used to intstall, remove, upgrade other packages
+
+I:
+sudo agpt-get install package name #to install all packages
+sudo agpt-get install apache2 mysql-server php-mysql php libapach2-mod-php php-pear curl php-curl php-cli git
+and follow this link to set up php-mcrypt https://computingforgeeks.com/install-php-mcrypt-extension-on-ubuntu/
+sudo apt install php php-pear php-dev libmcrypt-dev
+sudo pecl channel-update pecl.php.net
+sudo pecl update-channels
+sudo pecl update-channels
+sudo pecl install mcrypt
+add extension=mcrypt.so to:
+sudo vim /etc/php/*/cli/php.ini and sudo vim /etc/php/*/apache2/php.ini
+test by:
+php -m | grep mcrypt
+should get:
+mcrypt
+
+sudo systemctl restart apache2
+
+
+II:
+cd ../../var/www/html (../../ to go to root directory)
+pwd
+sudo git clone https://github.com/maroun-chahin/stunning-laravel.git
+
+III:
+fix the command by:
+sudo curl -sS https://getcomposer.org/installer -o composer-setup.php | sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+run it 
+sudo apt-get install php-zip (also had to unzip t)
+sudo composer install 
+
+IV:
+pwd
+sudo cp .env.example ./.env
+sudo nano .env
+edit the APP_NAME to :Scripting Project" (with double quotes)
+sudo php artisan key:generate
+
+V:
+
+apache2 -v
+which apache2 (will give a wrong path and spend the rest of the day looking for it)
+we used  dpkg -L apache2
+the good path was:
+/etc/apache2
+sudo nano apache2.conf
+add the text yougave us
+cd sites-enabled
+sudo nano 000-default.conf
+add the text provided
+
+sudo systemctl restart apache2
+
+VI:
+cd ../../../var/www/html/stunning-laravel
+
+“sudo chgrp -R www-data storage bootstrap/cache” 
+The chgrp (change group) command alters the group name that a file or directory belongs to. 
+Each file in Linux is created by a user, while each user belongs to groups. 
+By changing the group ownership of a file, the permissions to access and modify a file changes as well.
+Since the chgrp command requires superuser permissions, remember to run the command with the sudo prefix for proper execution.
+
+“sudo chmod -R ug+rwx storage bootstrap/cache"
+These flags are called file permissions or modes, as in "mode of access." 
+The command name chmod stands for "change mode." It restricts the way a file can be accessed.
+
+IP address:
+curl ifconfig.me
+18.202.57.3
+allah yberek fik
+
+
+
+
