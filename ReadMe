@@ -58,18 +58,18 @@ VI:
 cd ../../../var/www/html/stunning-laravel
 
 “sudo chgrp -R www-data storage bootstrap/cache” 
-The chgrp (change group) command alters the group name that a file or directory belongs to. 
-Each file in Linux is created by a user, while each user belongs to groups. 
-By changing the group ownership of a file, the permissions to access and modify a file changes as well.
-Since the chgrp command requires superuser permissions, remember to run the command with the sudo prefix for proper execution.
+chgrp stands for change group and it chnages to group that the file is inor belongs to.
+In ubuntu, each file created by a user belongs to thi suser while the user belongs to a group.
+chgrp will allowaccess to that grp by the users of the grp,meaniung by changing the grp of a file, permissions on it arre changed accordingly
 
 “sudo chmod -R ug+rwx storage bootstrap/cache"
-These flags are called file permissions or modes, as in "mode of access." 
-The command name chmod stands for "change mode." It restricts the way a file can be accessed.
+chmod stands for chand mode and -R to chnage the premissions of access, and the other flags ug+rwx are the file premissionsato be set 
+these premissions restrict the way this file can be accessed. rwx stand for read write execute 
 
 IP address:
 curl ifconfig.me
 18.202.57.3
+
 allah yberek fik
 
 
